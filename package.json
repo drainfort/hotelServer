@@ -1,0 +1,29 @@
+{
+  "name": "hotels-server",
+  "version": "0.0.1",
+  "description": "API REST to consult the information of hotels",
+  "main": "index.js",
+  "scripts": {
+    "start": "export NODE_ENV=dev && nodemon -e js,ts --exec \"ts-node\" src/server",
+    "prod": "export NODE_ENV=prod && nodemon -e js,ts --exec \"ts-node\" src/server",
+    "startWindows": "SET NODE_ENV=dev && nodemon -e js,ts --exec \"ts-node\" src/server",
+    "prodWindows": "SET NODE_ENV=prod && nodemon -e js,ts --exec \"ts-node\" src/server",
+    "build": "tsc -p tsconfig.json & cp \"package.json\" \"dist/package.json\" & cp -R \"data\" \"dist/data\" & cp -R \"config\" \"dist/config\"",
+    "buildWindows": "tsc -p tsconfig.json & xcopy \"package.json\" \"dist/package.json\" & xcopy \"data\" \"dist/data\" & xcopy \"config\" \"dist/config\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaime Romero",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.7.1",
+    "@types/mocha": "^5.2.0",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "typescript": "^3.0.1",
+    "typescript-eslint-parser": "^18.0.0"
+  }
+}
