@@ -9,6 +9,7 @@ class App {
   constructor () {
     this.app = express();
     this.app.use(cors());
+    this.app.use(express.json());
     this.app.use(function (req: Request, res: Response, next: NextFunction) {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");

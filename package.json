@@ -10,6 +10,10 @@
     "prodWindows": "SET NODE_ENV=prod && nodemon -e js,ts --exec \"ts-node\" src/server",
     "build": "tsc -p tsconfig.json & cp \"package.json\" \"dist/package.json\" & cp -R \"data\" \"dist/data\" & cp -R \"config\" \"dist/config\"",
     "buildWindows": "tsc -p tsconfig.json & xcopy \"package.json\" \"dist/package.json\" & xcopy \"data\" \"dist/data\" & xcopy \"config\" \"dist/config\"",
+    "runBuildDev": "export NODE_ENV=dev && node server.js",
+    "runBuildProd": "export NODE_ENV=prod && node server.js",
+    "runBuildDevWindows": "SET NODE_ENV=dev && node server.js",
+    "runBuildProdWindows": "SET NODE_ENV=prod && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jaime Romero",
@@ -21,9 +25,11 @@
     "ts-node": "^7.0.1"
   },
   "dependencies": {
+    "autobind-decorator": "^2.1.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "mocha": "^5.2.0",
+    "mongodb": "^3.1.3",
     "typescript": "^3.0.1",
     "typescript-eslint-parser": "^18.0.0"
   }
