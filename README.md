@@ -1,4 +1,4 @@
-#HotelSever:
+#HotelServer:
 
 Esta aplicación tiene dos archivos de configuración:
 /config/dev.json
